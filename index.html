@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Promos e Bugs da Shopee 🧡</title>
-<meta name="description" content="Grupo gratuito com os melhores achadinhos, cupons e bugs de preço da Shopee todo dia!">
+<title>Promos da Shopee 🧡</title>
+<meta name="description" content="Grupo gratuito com os melhores achadinhos, cupons e ofertas da Shopee todo dia!">
 
 <!-- Meta Pixel Code -->
 <script>
@@ -25,230 +25,290 @@ fbq('track', 'PageView');
 </noscript>
 <!-- End Meta Pixel Code -->
 
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+  :root {
+    --orange: #F4511E;
+    --orange-dark: #D84315;
+    --orange-soft: #FFF3EE;
+    --orange-mid: #FFE0D6;
+    --green: #2E7D5E;
+    --green-light: #E8F5EE;
+    --text-dark: #1C1917;
+    --text-mid: #57534E;
+    --text-light: #A8A29E;
+    --border: #E7E5E4;
+    --white: #FFFFFF;
+  }
+
   body {
-    font-family: 'Inter', sans-serif;
-    background: #FF5722;
+    font-family: 'DM Sans', sans-serif;
+    background: #F5F3F1;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 24px 16px;
+    padding: 32px 16px;
     position: relative;
-    overflow-x: hidden;
   }
 
   body::before {
     content: '';
     position: fixed;
     inset: 0;
-    background:
-      radial-gradient(ellipse at 20% 20%, rgba(255,200,100,0.25) 0%, transparent 60%),
-      radial-gradient(ellipse at 80% 80%, rgba(180,30,0,0.3) 0%, transparent 60%);
+    background-image:
+      radial-gradient(circle at 15% 50%, rgba(244,81,30,0.07) 0%, transparent 55%),
+      radial-gradient(circle at 85% 20%, rgba(244,81,30,0.05) 0%, transparent 50%);
     pointer-events: none;
+    z-index: 0;
   }
 
-  .badge-top {
-    background: #FFE082;
-    color: #BF360C;
-    font-family: 'Nunito', sans-serif;
-    font-weight: 900;
-    font-size: 12px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    padding: 6px 18px;
+  .wrapper {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .label-top {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: var(--white);
+    border: 1.5px solid var(--border);
     border-radius: 100px;
-    margin-bottom: 24px;
-    animation: pulse-badge 2s ease-in-out infinite;
+    padding: 6px 16px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-mid);
+    letter-spacing: 0.3px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
   }
 
-  @keyframes pulse-badge {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.05); }
+  .label-dot {
+    width: 7px;
+    height: 7px;
+    background: var(--orange);
+    border-radius: 50%;
   }
 
   .card {
-    background: #fff;
-    border-radius: 28px;
-    padding: 40px 32px 36px;
-    max-width: 440px;
+    background: var(--white);
+    border-radius: 24px;
+    padding: 36px 32px 32px;
     width: 100%;
     text-align: center;
-    position: relative;
-    box-shadow: 0 32px 80px rgba(0,0,0,0.22);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.04), 0 12px 40px rgba(0,0,0,0.10);
+    border: 1px solid var(--border);
+    animation: fadeUp 0.5s ease both;
   }
 
-  .emoji-icon {
-    font-size: 64px;
-    line-height: 1;
-    margin-bottom: 12px;
-    display: block;
-    animation: bounce 1.8s ease-in-out infinite;
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
   }
 
-  @keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-8px); }
-  }
-
-  .group-name {
-    font-family: 'Nunito', sans-serif;
-    font-weight: 900;
-    font-size: 26px;
-    color: #1a1a1a;
-    line-height: 1.2;
-    margin-bottom: 8px;
-  }
-
-  .group-name span { color: #FF5722; }
-
-  .subtitle {
-    font-size: 15px;
-    color: #666;
-    line-height: 1.5;
-    margin-bottom: 28px;
-  }
-
-  .stats-row {
+  .logo-mark {
+    width: 72px;
+    height: 72px;
+    background: var(--orange-soft);
+    border-radius: 20px;
     display: flex;
-    gap: 10px;
-    margin-bottom: 28px;
+    align-items: center;
     justify-content: center;
+    font-size: 36px;
+    margin: 0 auto 20px;
+    border: 1.5px solid var(--orange-mid);
   }
 
-  .stat {
-    background: #FFF3E0;
-    border-radius: 14px;
-    padding: 12px 16px;
-    flex: 1;
+  .card-title {
+    font-family: 'Sora', sans-serif;
+    font-weight: 800;
+    font-size: 24px;
+    color: var(--text-dark);
+    line-height: 1.25;
+    margin-bottom: 10px;
+    letter-spacing: -0.5px;
   }
 
-  .stat-num {
-    font-family: 'Nunito', sans-serif;
-    font-weight: 900;
-    font-size: 22px;
-    color: #E64A19;
+  .card-title em {
+    font-style: normal;
+    color: var(--orange);
   }
 
-  .stat-label {
-    font-size: 11px;
-    color: #999;
-    font-weight: 500;
-    margin-top: 2px;
+  .card-desc {
+    font-size: 14.5px;
+    color: var(--text-mid);
+    line-height: 1.65;
+    margin-bottom: 28px;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .divider {
+    height: 1px;
+    background: var(--border);
+    margin: 0 -32px 24px;
   }
 
   .benefits {
     list-style: none;
-    margin-bottom: 28px;
+    margin-bottom: 24px;
     text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
   }
 
   .benefits li {
     display: flex;
-    align-items: center;
-    gap: 10px;
+    align-items: flex-start;
+    gap: 12px;
     font-size: 14px;
-    color: #444;
-    padding: 7px 0;
-    border-bottom: 1px solid #f0f0f0;
-  }
-
-  .benefits li:last-child { border-bottom: none; }
-
-  .check {
-    width: 22px;
-    height: 22px;
-    background: #E8F5E9;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-    flex-shrink: 0;
-  }
-
-  .urgency-bar {
-    background: #FFF3E0;
-    border: 1.5px dashed #FFB74D;
+    color: var(--text-dark);
+    padding: 10px 12px;
     border-radius: 12px;
-    padding: 10px 16px;
-    margin-bottom: 24px;
-    font-size: 13px;
-    color: #E65100;
-    font-weight: 600;
+    transition: background 0.15s;
+  }
+
+  .benefits li:hover { background: var(--orange-soft); }
+
+  .benefit-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+    background: var(--orange-soft);
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 15px;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .benefit-text strong {
+    display: block;
+    font-weight: 600;
+    font-size: 13.5px;
+    color: var(--text-dark);
+    margin-bottom: 1px;
+  }
+
+  .benefit-text span {
+    font-size: 12.5px;
+    color: var(--text-light);
+    line-height: 1.4;
+  }
+
+  /* Counter + Countdown row */
+  .proof-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+
+  .proof-box {
+    flex: 1;
+    border-radius: 12px;
+    padding: 10px 12px;
+    display: flex;
+    align-items: center;
     gap: 8px;
+    text-align: left;
+  }
+
+  .proof-box.counter {
+    background: var(--orange-soft);
+    border: 1.5px solid var(--orange-mid);
+  }
+
+  .proof-box.timer {
+    background: #FFF8E1;
+    border: 1.5px solid #FFE082;
   }
 
   .dot-live {
     width: 8px;
     height: 8px;
-    background: #4CAF50;
     border-radius: 50%;
-    animation: blink 1s ease-in-out infinite;
     flex-shrink: 0;
   }
+
+  .proof-box.counter .dot-live { background: #F4511E; animation: blink 1.2s ease-in-out infinite; }
+  .proof-box.timer .dot-live   { background: #FFA000; animation: blink 1s ease-in-out infinite; }
 
   @keyframes blink {
     0%, 100% { opacity: 1; }
     50% { opacity: 0.2; }
   }
 
+  .proof-info { line-height: 1.25; }
+
+  .proof-info b {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-dark);
+  }
+
+  .proof-box.timer .proof-info b { color: #E65100; }
+  .proof-box.counter .proof-info b { color: var(--orange-dark); }
+
+  .proof-info small {
+    font-size: 11px;
+    color: var(--text-light);
+    font-weight: 500;
+  }
+
+  /* CTA */
   .btn-whatsapp {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    background: #25D366;
+    background: var(--green);
     color: #fff;
-    font-family: 'Nunito', sans-serif;
-    font-weight: 900;
-    font-size: 18px;
+    font-family: 'Sora', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
     border: none;
-    border-radius: 16px;
-    padding: 18px 28px;
+    border-radius: 14px;
+    padding: 17px 24px;
     width: 100%;
     cursor: pointer;
     text-decoration: none;
-    transition: transform 0.15s, background 0.15s, box-shadow 0.15s;
-    box-shadow: 0 8px 24px rgba(37,211,102,0.4);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .btn-whatsapp::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to bottom, rgba(255,255,255,0.12), transparent);
-    pointer-events: none;
+    transition: background 0.18s, transform 0.15s, box-shadow 0.18s;
+    box-shadow: 0 4px 16px rgba(46,125,94,0.28);
+    letter-spacing: -0.2px;
   }
 
   .btn-whatsapp:hover {
-    background: #1ebe5b;
-    transform: translateY(-2px);
-    box-shadow: 0 12px 32px rgba(37,211,102,0.5);
+    background: #256B50;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px rgba(46,125,94,0.35);
   }
 
   .btn-whatsapp:active { transform: translateY(0); }
 
   .btn-whatsapp svg {
-    width: 26px;
-    height: 26px;
+    width: 22px;
+    height: 22px;
     flex-shrink: 0;
   }
 
   .safe-note {
     margin-top: 14px;
     font-size: 12px;
-    color: #aaa;
+    color: var(--text-light);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -256,73 +316,125 @@ fbq('track', 'PageView');
   }
 
   @media (max-width: 400px) {
-    .card { padding: 32px 20px 28px; }
-    .group-name { font-size: 22px; }
-    .stat-num { font-size: 18px; }
+    .card { padding: 28px 20px 24px; }
+    .divider { margin: 0 -20px 20px; }
+    .card-title { font-size: 21px; }
   }
 </style>
 </head>
 <body>
 
-<div class="badge-top">🔥 Grupo gratuito — vagas limitadas!</div>
+<div class="wrapper">
 
-<div class="card">
-  <span class="emoji-icon">🧡</span>
-  <h1 class="group-name">Promos e Bugs<br>da <span>Shopee</span> 🧡</h1>
-  <p class="subtitle">Economize todo dia com os melhores achadinhos, cupons e bugs de preço antes que acabem!</p>
-
-  <div class="stats-row">
-    <div class="stat">
-      <div class="stat-num">+12k</div>
-      <div class="stat-label">membros</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num">+50</div>
-      <div class="stat-label">ofertas/dia</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num">100%</div>
-      <div class="stat-label">gratuito</div>
-    </div>
+  <div class="label-top">
+    <div class="label-dot"></div>
+    Grupo gratuito no WhatsApp
   </div>
 
-  <ul class="benefits">
-    <li><span class="check">✅</span> Bugs de preço antes de todo mundo</li>
-    <li><span class="check">🏷️</span> Cupons exclusivos com descontos reais</li>
-    <li><span class="check">⚡</span> Alertas de relâmpago em tempo real</li>
-    <li><span class="check">📦</span> Frete grátis + cashback da Shopee</li>
-  </ul>
+  <div class="card">
+    <div class="logo-mark">🧡</div>
 
-  <div class="urgency-bar">
-    <div class="dot-live"></div>
-    <span><span id="counter">17</span> pessoas entraram na última hora</span>
+    <h1 class="card-title">Promos e Cupons<br>da <em>Shopee</em></h1>
+    <p class="card-desc">Compartilhamos diariamente as melhores ofertas, cupons e promoções encontradas na Shopee — tudo de graça, sem spam.</p>
+
+    <div class="divider"></div>
+
+    <ul class="benefits">
+      <li>
+        <div class="benefit-icon">🏷️</div>
+        <div class="benefit-text">
+          <strong>Cupons e descontos reais</strong>
+          <span>Códigos verificados antes de serem compartilhados</span>
+        </div>
+      </li>
+      <li>
+        <div class="benefit-icon">⚡</div>
+        <div class="benefit-text">
+          <strong>Alertas de promoções relâmpago</strong>
+          <span>Notificações das ofertas por tempo limitado da Shopee</span>
+        </div>
+      </li>
+      <li>
+        <div class="benefit-icon">📦</div>
+        <div class="benefit-text">
+          <strong>Frete grátis e cashback</strong>
+          <span>Dicas para aproveitar os benefícios da plataforma</span>
+        </div>
+      </li>
+      <li>
+        <div class="benefit-icon">🔍</div>
+        <div class="benefit-text">
+          <strong>Achadinhos curados</strong>
+          <span>Produtos com boa avaliação e preço competitivo</span>
+        </div>
+      </li>
+    </ul>
+
+    <!-- Counter + Countdown -->
+    <div class="proof-row">
+      <div class="proof-box counter">
+        <div class="dot-live"></div>
+        <div class="proof-info">
+          <b><span id="people-count">23</span> pessoas</b>
+          <small>entraram hoje no grupo</small>
+        </div>
+      </div>
+      <div class="proof-box timer">
+        <div class="dot-live"></div>
+        <div class="proof-info">
+          <b id="countdown">14:32</b>
+          <small>para fechar as vagas</small>
+        </div>
+      </div>
+    </div>
+
+    <a
+      class="btn-whatsapp"
+      href="https://chat.whatsapp.com/JIftWkEDgd71UgiTF34MjU"
+      target="_blank"
+      rel="noopener"
+      onclick="fbq('track', 'Lead'); fbq('track', 'Contact');"
+    >
+      <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zm-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884zm8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+      Entrar no Grupo Gratuitamente
+    </a>
+
+    <p class="safe-note">🔒 Sem spam · Saia quando quiser · 100% gratuito</p>
   </div>
 
-  <a
-    class="btn-whatsapp"
-    href="https://chat.whatsapp.com/JIftWkEDgd71UgiTF34MjU"
-    target="_blank"
-    rel="noopener"
-    onclick="fbq('track', 'Lead'); fbq('track', 'Contact');"
-  >
-    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zm-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884zm8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-    </svg>
-    Entrar no Grupo Agora
-  </a>
-
-  <p class="safe-note">🔒 Gratuito, sem spam, saia quando quiser</p>
 </div>
 
 <script>
-  const el = document.getElementById('counter');
-  let val = 17;
+  // --- People counter: increments slowly and randomly ---
+  const peopleEl = document.getElementById('people-count');
+  let people = 23;
   setInterval(() => {
-    if (Math.random() > 0.5) {
-      val = Math.max(10, Math.min(30, val + (Math.random() > 0.5 ? 1 : -1)));
-      el.textContent = val;
+    if (Math.random() > 0.55) {
+      people = Math.min(people + 1, 99);
+      peopleEl.textContent = people;
     }
-  }, 4000);
+  }, 7000);
+
+  // --- Countdown: starts from a random time between 12–18 min, resets when it hits 0 ---
+  const cdEl = document.getElementById('countdown');
+  function randomStart() {
+    return (Math.floor(Math.random() * 7) + 12) * 60; // 12 to 18 min in seconds
+  }
+  let seconds = randomStart();
+
+  function tick() {
+    seconds--;
+    if (seconds <= 0) {
+      seconds = randomStart(); // reset — vagas "reabertas"
+    }
+    const m = Math.floor(seconds / 60);
+    const s = seconds % 60;
+    cdEl.textContent = String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
+  }
+
+  setInterval(tick, 1000);
 </script>
 
 </body>
