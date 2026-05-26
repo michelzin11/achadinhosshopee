@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Promos e Bugs da Shopee</title>
+  <meta name="description" content="Grupo VIP com cupons secretos, bugs e promoções selecionadas da Shopee. Mais de 30 mil pessoas economizando todo dia!" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph (preview ao compartilhar no WhatsApp/Insta) -->
+  <meta property="og:title" content="Promos e Bugs da Shopee" />
+  <meta property="og:description" content="Cupons secretos, bugs e promoções selecionadas. Participe grátis!" />
+  <meta property="og:image" content="assets/avatar.png" />
+  <meta property="og:type" content="website" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/avatar.png" type="image/png" />
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --shopee: #FF6000;
+      --shopee-dark: #e05500;
+      --bg: #f0f4f0;
+      --card-bg: #f7f9f5;
+      --text: #1a1a1a;
+      --muted: #666;
+    }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: var(--bg);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* BANNER */
+    .top-banner {
+      width: 100%;
+      background: var(--shopee);
+      color: #fff;
+      text-align: center;
+      padding: 13px 16px;
+      font-size: 0.82rem;
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    /* CARD */
+    .card {
+      background: var(--card-bg);
+      width: 100%;
+      max-width: 480px;
+      min-height: calc(100vh - 44px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 36px 28px 48px;
+    }
+
+    /* AVATAR */
+    .avatar-wrap {
+      position: relative;
+      width: 130px;
+      height: 130px;
+      margin-bottom: 22px;
+    }
+
+    .avatar-ring {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 4px solid var(--shopee);
+      padding: 4px;
+      background: var(--card-bg);
+    }
+
+    .avatar-ring img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .verified {
+      position: absolute;
+      bottom: 4px;
+      right: 4px;
+      width: 30px;
+      height: 30px;
+      background: #1d9bf0;
+      border-radius: 50%;
+      border: 2px solid var(--card-bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .verified svg { width: 16px; height: 16px; fill: #fff; }
+
+    /* TITLE */
+    h1 {
+      font-size: 1.75rem;
+      font-weight: 900;
+      color: var(--text);
+      text-align: center;
+      line-height: 1.2;
+      margin-bottom: 18px;
+    }
+
+    /* SUBTITLE PILL */
+    .subtitle-pill {
+      border: 2px solid var(--shopee);
+      border-radius: 999px;
+      padding: 9px 22px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--shopee);
+      margin-bottom: 28px;
+      text-align: center;
+    }
+
+    /* CHECKLIST */
+    .checklist {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+
+    .check-item {
+      background: #fff;
+      border-radius: 12px;
+      padding: 16px 18px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: var(--text);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    }
+
+    .check-circle {
+      width: 28px;
+      height: 28px;
+      min-width: 28px;
+      border-radius: 50%;
+      background: var(--shopee);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .check-circle svg { width: 14px; height: 14px; fill: #fff; }
+
+    /* CTA */
+    .cta-btn {
+      width: 100%;
+      background: linear-gradient(135deg, var(--shopee), #ff8533);
+      color: #fff;
+      border-radius: 999px;
+      padding: 20px;
+      font-family: 'Nunito', sans-serif;
+      font-size: 1rem;
+      font-weight: 900;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      text-align: center;
+      text-decoration: none;
+      display: block;
+      box-shadow: 0 6px 24px rgba(255,96,0,0.4);
+      transition: transform 0.18s, box-shadow 0.18s;
+      margin-bottom: 18px;
+    }
+
+    .cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 32px rgba(255,96,0,0.5);
+    }
+
+    .cta-btn:active { transform: scale(0.98); }
+
+    /* SOCIAL PROOF */
+    .social-proof {
+      font-size: 0.83rem;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .social-proof strong {
+      color: var(--shopee);
+      font-weight: 900;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-banner">Participe do Grupo de Forma Gratuita</div>
+
+  <div class="card">
+
+    <div class="avatar-wrap">
+      <div class="avatar-ring">
+        <img src="assets/avatar.png" alt="Avatar Promos e Bugs da Shopee" width="122" height="122" />
+      </div>
+      <div class="verified" aria-label="Verificado">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+      </div>
+    </div>
+
+    <h1>Promos e Bugs da Shopee</h1>
+
+    <div class="subtitle-pill">Chegou a hora de economizar! 🤑</div>
+
+    <ul class="checklist" role="list">
+      <li class="check-item">
+        <div class="check-circle" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+        </div>
+        Cupons Secretos
+      </li>
+      <li class="check-item">
+        <div class="check-circle" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+        </div>
+        Apenas promoções selecionadas
+      </li>
+      <li class="check-item">
+        <div class="check-circle" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+        </div>
+        Pode sair quando quiser
+      </li>
+    </ul>
+
+    <a href="https://chat.whatsapp.com/JIftWkEDgd71UgiTF34MjU"
+       class="cta-btn"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Entrar no grupo do WhatsApp">
+      Entrar no Grupo e Economizar
+    </a>
+
+    <p class="social-proof">Mais de <strong>30 mil pessoas</strong> já economizam todos os dias no grupo</p>
+
+  </div>
+
+</body>
+</html>
